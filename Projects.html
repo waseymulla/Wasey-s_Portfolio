@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>My Projects</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../Assets/about.css" />
+    <link rel="stylesheet" href="../Assets/stylesheet.css" />
+  </head>
+  <body class="container">
+    <nav class="navbar">
+      <div class="logo">WM</div>
+
+      <div class="menu-icon" onclick="toggleMenu()">
+        <img class="hamburger" src="../Assets/burger-menu.svg" alt="Menu" />
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./About.html">About</a></li>
+        <li><a href="./Projects.html">Projects</a></li>
+      </ul>
+    </nav>
+
+    <div class="container_about">
+      <div class="centered text_color">
+        <h1>Most Recent Projects and Research</h1>
+      </div>
+    </div>
+
+    <div class="container_about">
+      <div class="cont_1">
+        <div>
+          <img class="img_about" src="../Assets/UTDsite.png" />
+        </div>
+
+        <div class="text_color">
+          <div class="h1_noncenter">Web Development</div>
+
+          <div>
+            <div class="underline">Overview:</div>
+            <div class="bullet">
+              During the summer and fall semesters of 2023, the Graduate
+              Advising Office at the University of Texas at Dallas (UTD) faced
+              challenges in responding to and maintaining the needs of current
+              and incoming Computer Science (CS) students due to limited advisor
+              staff. To address this issue, our team embarked on creating an
+              automated solution to expedite the degree planning and auditing
+              process for sophomore and senior students.
+            </div>
+
+            <div class="underline">Approach:</div>
+            <div class="bullet">
+              We designed a user-friendly web application featuring three forms
+              for inputting student information. The first form collects general
+              student details, including name, student ID, major degree track,
+              and anticipated graduation. The second form focuses on course
+              completion, categorizing completed courses into different levels
+              and categories. We implemented drag-and-drop functionality for
+              degree track courses and manual entry for elective courses. The
+              third form captures detailed information about each individual
+              course, essential for GPA calculations and report generation.
+            </div>
+            <div class="bullet">
+              Additionally, we developed an administration page to facilitate
+              easyupdates to course offerings, degree tracks, and GPA
+              requirements. This page allows administrators to modify existing
+              data and add or remove degree tracks and courses as needed.
+            </div>
+            <div class="bullet"></div>
+
+            <div class="underline">Technologies Used:</div>
+            <div class="bullet">
+              Our solution leverages JavaScript, PHP, SQL, and jsPDF for PDF
+              generation. These technologies enable seamless interaction between
+              the front-end and back-end components, enhancing the speed and
+              accuracy of degree evaluations.
+            </div>
+
+            <div class="underline">Results:</div>
+
+            <div class="bullet">
+              By implementing our automated tool, we successfully improved the
+              advisor's response rate to students by 20%. This significant
+              enhancement in efficiency has contributed to better student
+              satisfaction and smoother academic planning processes within the
+              Graduate Advising Office at UTD.
+            </div>
+          </div>
+          <div class="bullet">
+            <a
+              class="small_p"
+              href="../Assets/CS4485-Project 42-Team2-DP&A-Presentation.pdf"
+            >
+              MORE INFORMATION</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container_about">
+      <div class="cont_1">
+        <div>
+          <img class="img_about" src="../Assets/db_research.png" />
+        </div>
+
+        <div class="text_color">
+          <div class="h1_noncenter">Database</div>
+          <div class="underline">Project Overview:</div>
+          <div class="bullet">
+            The research project aimed to address the challenges associated with
+            query optimization in databases, particularly focusing on
+            maintaining semantic equivalence while enhancing query performance.
+            Our team explored the application of U-Semiring Algebra for SQL
+            query equivalence verification, contributing to the advancement of
+            database query optimization methodologies.
+          </div>
+          <div class="underline">Research Issue:</div>
+          <div class="bullet">
+            Efficient query optimization plays a crucial role in improving
+            database performance by minimizing the number of accessed rows.
+            However, ensuring that optimized queries maintain semantic
+            equivalence with their original counterparts poses a significant
+            challenge. Our project aimed to address this issue by rigorously
+            testing the equivalence of optimized and unoptimized queries.
+          </div>
+
+          <div class="underline">Contributions:</div>
+          <div class="bullet">
+            Our project successfully validated the semantic equivalence of SQL
+            queries through meticulous analysis and testing. We implemented the
+            U-Semiring algorithm to systematically manipulate unoptimized
+            queries and observe their transformations into optimized versions.
+            This validation process involved exhaustive testing to ensure that
+            the optimized queries consistently produced equivalent results to
+            their original counterparts. Additionally, our project developed a
+            Query Analyzer tool to facilitate comprehensive verifications,
+            highlighting our dedication to ensuring both semantic and logical
+            equivalence between query versions.
+          </div>
+
+          <div class="underline">
+            Technical, Algorithm, Analysis, and Implementation:
+          </div>
+
+          <div class="bullet">
+            Our implementation replicated the research paper's methodology on a
+            common test database, demonstrating the effectiveness of U-Semiring
+            Algebra in creating equivalent queries. We imported a complex DBMS,
+            utilized the sqlglot library for SQL manipulation, and compared the
+            execution times of optimized and unoptimized queries. The project
+            employed various strategies, including tree manipulation and query
+            timing, to assess equivalence and optimize queries effectively.
+          </div>
+          <div class="underline">Evaluation:</div>
+          <div class="bullet">
+            Our evaluation process included SQL query comparison and
+            manipulation, showcasing an average 8% improvement in query
+            execution times. Through rigorous testing and manipulation steps, we
+            demonstrated the effectiveness of U-Semiring Algebra in maintaining
+            semantic equivalence while enhancing query performance.
+          </div>
+
+          <div class="underline">Conclusion:</div>
+          <div class="bullet">
+            Our research addressed the critical issue of query optimization and
+            semantic equivalence verification in databases. By implementing the
+            U-Semiring algorithm and developing a comprehensive testing
+            framework, we provided valuable insights into SQL query optimization
+            methodologies. The project's success highlights the potential of
+            U-Semiring Algebra in advancing database query optimization
+            practices.
+          </div>
+
+          <div class="bullet">
+            <a
+              class="small_p"
+              href="../Assets/Utilizing U-Semiring Algebra for SQL Query Equivalence Verification Implementation.pdf"
+            >
+              MORE INFORMATION</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container_about">
+      <div class="cont_1">
+        <div class="cont_1_1">
+          <img class="img_about " src="../Assets/ml_1.png" />
+          <img class="img_about " src="../Assets/ml_2.png" />
+          <img class="img_about " src="../Assets/ml_3.png" />
+        </div>
+
+        <div class="text_color">
+          <div class="h1_noncenter">Machine Learning</div>
+
+          <div class="underline">Purpose:</div>
+
+          <div class="bullet">
+            The purpose of the project "Precision Redefined: CNN and Bounding
+            Boxes in Mathematical Equation Solving" is to advance the field of
+            Optical Character Recognition (OCR) by integrating Convolutional
+            Neural Networks (CNNs) with bounding box methodologies for the
+            accurate recognition and interpretation of mathematical symbols,
+            variables, and operators. The project aims to bridge the gap between
+            physical and digital mathematics by developing a refined framework
+            tailored specifically for recognizing mathematical notation. By
+            leveraging cutting-edge technologies, the project seeks to
+            facilitate the seamless transition from traditional pen-and-paper
+            practices to enhanced digital workflows in education, research, and
+            industry. Through detailed methodologies, case studies, and
+            experimental results, the project aims to demonstrate the potential
+            of OCR to digitize handwritten mathematical content effectively.
+          </div>
+          <div class="underline">Languages and Tools:</div>
+          <div class="bullet">
+            Python: The project primarily utilizes the Python programming
+            language for implementing OCR algorithms, CNN models, and data
+            preprocessing techniques. Pillow Library: Python's Pillow library is
+            employed for image preprocessing tasks, such as grayscale conversion
+            and contour detection.
+          </div>
+          <div class="bullet">
+            SymPy Library: SymPy is used for mathematical computation and
+            equation solving, enabling the system to process and interpret
+            mathematical expressions.
+          </div>
+          <div class="bullet">
+            TensorFlow/Keras: TensorFlow and Keras frameworks are utilized for
+            building and training CNN models, leveraging their comprehensive
+            tools for deep learning tasks.
+          </div>
+          <div class="bullet">
+            Matplotlib and Seaborn: These visualization libraries are utilized
+            for generating graphs and visual representations of
+            training/validation metrics and results analysis.
+          </div>
+
+          <div class="underline">Effects of the Project:</div>
+          <div class="bullet">
+            Advancement in OCR Technology: The integration of CNNs with bounding
+            box methodologies represents a paradigm shift in OCR technology,
+            significantly enhancing the accuracy and resilience of mathematical
+            equation solving.
+          </div>
+          <div class="underline">Facilitation of Digitization:</div>
+          <div class="bullet">
+            By accurately recognizing and interpreting handwritten mathematical
+            content, the project facilitates the digitization of mathematical
+            equations, enabling seamless integration into digital workflows in
+            education, research, and industry.
+          </div>
+          <div class="underline">Improved Educational Tools:</div>
+          <div class="bullet">
+            The development of advanced OCR systems tailored for mathematical
+            notation enhances educational tools and platforms, providing
+            students and educators with efficient methods for digitizing and
+            processing mathematical content.
+          </div>
+          <div class="underline">Practical Applications:</div>
+          <div class="bullet">
+            The project's outcomes have broad implications for various practical
+            applications, including automated grading systems, document
+            digitization, and mathematical problem-solving tools.
+          </div>
+
+          <div class="bullet">
+            <a class="small_p" href="../Assets/Photo Math Solver.docx.pdf">
+              MORE INFORMATION</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer_title_1">Wasey's_Portfolio.com</div>
+      <a class="my_resume" href="../Assets/WaseyMulla_Resume___.pdf"
+        >My Resume</a
+      >
+      <div class="footer_title_2">Media</div>
+      <a href="https://linkedin.com/in/waseymulla" class="linkedin">LinkedIn</a>
+    </div>
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById("nav-links");
+        if (navLinks.style.right === "0px") {
+          navLinks.style.right = "-100%";
+        } else {
+          navLinks.style.right = "0px";
+        }
+      }
+    </script>
+    <script src="" async defer></script>
+  </body>
+</html>

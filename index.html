@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Wasey's Portfolio</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../Assets/stylesheet.css" />
+  </head>
+  <body class="container">
+    <script src="" async defer></script>
+    <div class="">
+      <nav class="navbar">
+        <div class="logo">WM</div>
+
+        <div class="menu-icon" onclick="toggleMenu()">
+          <img class="hamburger" src="../Assets/burger-menu.svg" alt="Menu" />
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./About.html">About</a></li>
+          <li><a href="./Projects.html">Projects</a></li>
+          <!-- <li><a href="./Resume.html">Resume</a></li> -->
+        </ul>
+      </nav>
+      <!-- Your other HTML content here -->
+      <div class="sections">
+        <div class="center_page">
+          <div class="text1">
+            <span class="text">Hi! My name is Wasey Mulla</span>
+          </div>
+          <div class="text1">
+            <span class="text2 typewriter"></span>
+          </div>
+        </div>
+        <div><img class="image" src="../Assets/IMG_5861.jpg" /></div>
+      </div>
+
+      <div class="sections1">
+        <img class="intro_img" src="../Assets/UTD_logo.png" />
+
+        <div class="intro_paragraph">
+          Welcome to my website! I'm Wasey Mulla, a passionate Computer Science
+          professional currently pursuing my Master's degree in Computer Science
+          with a specialization in Intelligence Systems at The University of
+          Texas at Dallas. Alongside my academic pursuits, I'm deeply involved
+          in practical applications within the realms of machine learning and
+          software engineering.
+        </div>
+
+        <div class="intro_paragraph">
+          Web Development Tech Stack:
+          <br />
+          Proficient in popular languages such as Python, JavaScript, and Java,
+          I specialize in building scalable web applications. Leveraging
+          frameworks like React and Node.js, I craft intuitive user interfaces
+          and robust backend systems. My expertise in frontend and backend
+          development ensures seamless user experiences and efficient data
+          processing.
+        </div>
+        <div class="intro_paragraph">
+          Machine Learning:
+          <br />
+          I possess extensive experience in building robust machine learning
+          models using cutting-edge libraries such as TensorFlow and
+          Scikit-learn. From predictive analytics to natural language
+          processing, I thrive in developing innovative solutions to complex
+          problems. My expertise in data preprocessing, model training, and
+          evaluation ensures accurate and reliable predictions.
+        </div>
+        <div class="intro_paragraph">
+          Databases:
+          <br />
+          With proficiency in database management systems like MongoDB and SQL,
+          I ensure data integrity and accessibility throughout the development
+          process. From designing efficient database schemas to optimizing
+          queries, I manage large datasets effectively to support data-driven
+          decision-making.
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer_title_1">Wasey's_Portfolio.com</div>
+        <a class="my_resume" href="../Assets/WaseyMulla_Resume___.pdf"
+          >My Resume</a
+        >
+        <div class="footer_title_2">Media</div>
+        <a href="https://linkedin.com/in/waseymulla" class="linkedin"
+          >LinkedIn</a
+        >
+      </div>
+
+      <script>
+        const texts = [
+          "  Student",
+          "  Software Developer",
+          "  Machine Learning Researcher",
+        ];
+        let count = 0;
+        let index = 0;
+        let currentText = "";
+        let direction = 1;
+
+        function type() {
+          if (count === texts.length) {
+            count = 0;
+          }
+          currentText = texts[count];
+          document.querySelector(".typewriter").textContent = ""; // Clear previous text
+          animateText(0); // Start animating the text
+        }
+
+        function animateText(i) {
+          if (direction === 1) {
+            // Typing animation
+            if (i <= currentText.length) {
+              setTimeout(() => {
+                document.querySelector(".typewriter").textContent =
+                  currentText.substring(0, i);
+                animateText(i + 1);
+              }, 150); // Speed of typing
+            } else {
+              direction = -1; // Change direction to delete characters
+              animateText(currentText.length); // Start deleting characters
+            }
+          } else {
+            // Deleting animation
+            if (i >= 0) {
+              setTimeout(() => {
+                document.querySelector(".typewriter").textContent =
+                  currentText.substring(0, i);
+                animateText(i - 1);
+              }, 150); // Speed of deleting
+            } else {
+              direction = 1; // Change direction to typing
+              count++;
+              setTimeout(type, 1500); // Delay before typing the next word
+            }
+          }
+        }
+
+        type(); // Start typing animation
+
+        function toggleMenu() {
+          const navLinks = document.getElementById("nav-links");
+          if (navLinks.style.right === "0px") {
+            navLinks.style.right = "-100%";
+          } else {
+            navLinks.style.right = "0px";
+          }
+        }
+
+      </script>
+    </div>
+  </body>
+</html>

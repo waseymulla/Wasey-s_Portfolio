@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+a {
+  color: white;
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 3px;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #df2c2c;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+body {
+  background-color: #171717;
+}
+/* Navbar styles */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 1rem 0 1rem;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  display: inline-block;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.container {
+  display: block;
+
+  height: 100vh;
+  margin: 0;
+}
+
+.navbar {
+  background-color: #000000;
+
+  border-radius: 10px;
+  display: flex;
+  padding: 0.75rem 0.75rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 5px 10px 5px;
+  border: 2px whitesmoke solid;
+}
+
+.sections {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-image: url("./6397025.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-bottom: 2px solid rgb(140, 140, 140);
+}
+
+.sections1 {
+  padding: 40px;
+  color: white;
+
+  border-bottom: 2px solid rgb(140, 140, 140);
+}
+
+.intro_img {
+  margin: 35px;
+  margin-bottom: 20px;
+  max-height: 250px;
+  max-width: 250px;
+  height: 100%;
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.374);
+  border-radius: 50%;
+  float: left;
+}
+.text1 {
+  grid-row: 1;
+  grid-column: 1;
+
+  width: 700px;
+  padding: 10px;
+  color: #c4cfde;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.text2 {
+  position: relative;
+  grid-row: 2;
+  grid-column: 1;
+
+  width: 700px;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #df2c2c;
+}
+
+.typewriter {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid #df2c2c;
+  animation: typing 6s steps(30) infinite;
+}
+
+@keyframes animate {
+  0%,
+  70% {
+    width: 0;
+  }
+  85%,
+  100% {
+    width: 100%;
+  }
+}
+
+.image {
+  object-fit: contain;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.374);
+}
+
+@media (max-width: 390px) {
+  .sections1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .intro_img {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 991px) {
+  .intro_img {
+    max-width: 300px;
+
+    width: auto;
+    height: auto;
+    float: left;
+  }
+}
+
+@media (min-width: 992px) {
+  .intro_img {
+    max-width: 300px;
+    width: auto;
+    height: auto;
+    float: left;
+    margin: 30px;
+  }
+}
+
+.intro_paragraph {
+  margin-bottom: 15px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  padding: 20px;
+  gap: 5px 20px;
+
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer_title_1 {
+  grid-area: 1 / 1 / 2 / 2;
+  color: rgba(255, 255, 255, 0.374);
+}
+
+.footer_title_2 {
+  grid-area: 1 / 2 / 1 / 2;
+  color: whitesmoke;
+  font-size: larger;
+}
+
+.my_resume {
+  color: rgba(255, 255, 255, 0.374);
+  grid-area: 2/ 1 / 2 / 1;
+  text-decoration: none;
+}
+
+.linkedin {
+  color: rgba(255, 255, 255, 0.374);
+  grid-area: 2 / 2 / 2 / 2;
+  text-decoration: none;
+}
+.linkedin:hover::after {
+  width: 0;
+}
+.my_resume:hover::after {
+  width: 0;
+}
+
+.footer_title_1,
+.footer_title_2,
+.box1,
+.linkedin,
+.my_resume {
+  margin: 5px;
+  padding: 5px;
+}
+
+/* Initial styling */
+.menu-icon {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .navbar {
+    padding: 0.5rem;
+    height: 5%;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+  .menu-icon {
+    width: 45px;
+    padding: 5px;
+  }
+  .sections {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .text1,
+  .text2 {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .text1 {
+    font-size: 1.5rem;
+  }
+
+  .text2 {
+    font-size: 1.5rem;
+  }
+
+  .image {
+    margin-top: 20px;
+  }
+  .navbar {
+    padding: 0.5rem;
+    height: 5%;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  /* .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  } */
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 50%;
+    height: 100%;
+    /* border-radius: 0 0 0 10px; */
+    background-color: #000000;
+    padding-top: 3rem; 
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    z-index: 1;
+
+  }
+
+  .nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-links li {
+    padding: 1rem;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  .menu-icon {
+    display: block; 
+    cursor: pointer;
+    position: relative; /* Add position relative */
+    z-index: 2; /* Add a higher z-index */
+  }
+
+  .menu-toggle {
+    display: none; 
+  }
+
+  
+  .menu-toggle:checked ~ .nav-links {
+    left: 0;
+  }
+}
+
+/* For larger screens */
+@media (min-width: 900px) {
+  .sections {
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text1,
+  .text2 {
+    width: 700px;
+  }
+
+  .image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+
